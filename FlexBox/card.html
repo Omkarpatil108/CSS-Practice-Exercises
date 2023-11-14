@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .buddy{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 10px;
+        flex-wrap: wrap;
+        
+    }
+
+        
+
+    
+    .cards{
+        
+        height: 450px;
+        width: 350px;
+        background-color: rgb(164, 164, 211);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out ;
+        position: relative;
+         
+        
+    }
+    .cards:hover{
+     transform: scale(0.9) translateY(-10px); 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards .title{
+        padding: 10px;
+        color: black;
+    }
+    .cards .image img{
+        width: 100%;
+        background-size: cover;
+        border-top-right-radius:20px;
+        border-top-left-radius:20px;
+    }
+
+    
+
+
+    .des ul li{
+        color:black;
+        padding: 7px;
+        list-style: none;
+        height: 60px;
+        line-height: 1.1;
+        font-weight: 500;
+        
+    }
+
+
+    .button button{
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(153, 148, 202);
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        margin: 30px 0px;      
+        outline: none;  
+        border-radius: 30px;
+    }
+
+    .button button:hover{
+        background-color: rgb(from red r g b);
+        color: yellow;
+    }
+    
+
+  </style>
+</head>
+<body>
+  
+    
+
+    
+<div class="buddy">
+    <div class="cards">
+        <div class="image">
+            <img src="images/portfolio profile.jpg" alt="" width="100px" height="200px">
+        </div>
+    
+        <div class="title">
+            <h2>PortFolio</h2>
+        </div>
+        <div class="des">
+            <ul>
+                <li>Technologies used: HTML, CSS</li>
+                <li>This is my personal portfolio website</li>
+            </ul>
+        </div>
+        
+        <div class="button">
+            <button>VIEW</button>
+        </div>
+    </div>
+    
+    
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/weather.jpg" alt="" width="100px" height="200px">
+        </div>
+    
+        <div class="title">
+            <h2>Weather Web App</h2>
+        </div>
+        <div class="des">
+            
+                <ul>
+                    <li>Technologies used: HTML, CSS, JavaScript</li>
+                    <li>Here I designed a Website which give the live Weather condition from that particular location you wnat</li>
+                </ul>
+        </div>
+        
+        <div class="button">
+            <button>VIEW</button>
+        </div>
+    </div>
+    
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/netflix.png" alt="" width="100px" height="200px">
+        </div>
+        <div class="title">
+            <h2>Netflix clone</h2>
+        </div>
+        <div class="des">
+            
+    
+            <ul>
+                <li>Technologies used: HTML, CSS</li>
+                <li>Here i designed a Website which is NETFLIX clone where i used my front-end.
+                    I also worked on the back end side to make it functional with database connectivity.</li>
+            </ul>
+        </div>
+        
+        <div class="button">
+            <button>VIEW</button>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/servicesystem.jpg" alt="" width="100px" height="200px">
+        </div>
+    
+        <div class="title">
+            <h2>Service Providing System</h2>
+        </div>
+        <div class="des">
+            <ul>
+                <li>Technologies used: HTML, CSS, PHP ,Xammp</li>
+                <li>In this we developing a system which can give the technical service in your area for the particular reason.</li>
+            </ul>
+        </div>
+        
+        <div class="button">
+            <button>VIEW</button>
+        </div>
+    </div>
+    
+
+</div>
+
+
+</body>
+</html>
