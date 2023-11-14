@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: violet;
+            border: 10px solid rgb(184, 8, 8);
+            display: grid;
+            row-gap: 1rem;
+            column-gap: 1rem;
+            padding: 4rem;
+            /*grid-template-rows: 100px 100px;*/             /*height*/
+            grid-template-rows: repeat(2,1fr);
+            /*grid-template-columns:100px 100px 100px;*/      /*for width*/
+            grid-template-columns: repeat(3,1fr);
+            /*grid-template-areas:"span nav nav"
+                                "nav side";*/
+            
+        }
+
+        
+
+        
+        .container-1{
+            height: 100%;
+            width: 100%;
+            background-color: violet;
+            border: 10px solid rgb(184, 8, 8);
+            display: grid;
+            row-gap: 1rem;
+            column-gap: 1rem;
+            padding: 4rem;
+            /*grid-template-rows: 100px 100px;*/             /*height*/
+            grid-template-rows: repeat(6,1fr);
+            /*grid-template-columns:100px 100px 100px;*/      /*for width*/
+            grid-template-columns: repeat(1,1fr);
+            /*grid-template-areas:"span nav nav"
+                                "nav side";*/
+            
+        }
+
+
+
+        .item{
+            background-color: rgb(0,0,33);
+            border: 5px solid blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+                                     /*-------->>>>> column |
+                                                          |
+                                                          |
+                                                          v  row*/
+
+
+        @media (min-width:768px) {
+            .container-1{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(4,1fr);
+            }
+
+            .container-1 .header{
+
+
+                /*grid-column-start: 1;
+                grid-column-end:4;*/
+    
+                /*or you can try below one respective to the above*/
+    
+                grid-column: 1/4;
+            }
+    
+            .container-1 .footer{
+                grid-column:1/4;
+            }
+    
+            .container-1 .sidebar{
+                grid-row: 2/4;   
+                
+            }
+    
+            .container-1 .content-3{
+                grid-column: 2/4;
+                
+            }
+            
+        }
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+    </div>
+
+    <div class="container-1">
+        <div class="item header">header</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item content-3">content-3</div>
+        <div class="item ">content-4</div>
+        <div class="item ">content-5</div>
+        <div class="item footer">footer</div>  
+    </div>
+    
+</body>
+</html>
