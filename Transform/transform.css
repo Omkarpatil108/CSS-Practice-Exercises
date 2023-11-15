@@ -1,0 +1,58 @@
+.box{
+            height: 50px;
+            width: 50px;
+            background-color: #d5aaaa;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-1{
+            transform: rotate(45deg);  /*rotate(0.5turn) means 180 degree and (0.25turn) means 90deg*/
+        }
+            
+        .box-2{
+            transform: rotateX(50deg);
+            transform: rotateY(60deg);
+            transform: rotatez(10deg);
+
+        }
+
+        .box-3{
+            transform: scale(1.6);
+            transform: scaleX(1.6);
+            transform: scaleY(0.6);
+        }
+
+        .box-4{
+            transform: skew(27deg);
+            transform: skewX(30deg);
+            /*either x or y last one will override previous one*/
+            transform: skewY(27deg);
+            
+            /*you can't do skey in z index*/
+        }
+
+        .box-5{
+            transform: translate(55%);
+            transform: translateX(95%);
+            transform: translateY(45%);
+        }
+
+        .box-6{
+            transform: translateY(100%) skewX(45deg) translateX(-45%);
+        }
+            
+
+            
+
+            
+            
+        
+
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 3px solid blue;
+        }
